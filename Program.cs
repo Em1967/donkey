@@ -86,3 +86,8 @@
  // how many letters make up the longest character name(s)
  int LengthOfName = characters.Max(c => c.Name!.Length);
  Console.WriteLine($"There are {characters.Max(c => c.Name!.Length)} letters in the longest character's name");
+ // which characters have the longest name?
+ foreach(string? name in characters.Where(c => c.Name!.Length == LengthOfName).Select(c => c.Name))
+ {
+   Console.WriteLine($"\t{name}");
+ }
