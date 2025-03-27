@@ -71,3 +71,8 @@
  // how many characters appear in the Mario & Donkey Kong series?
  int DkMarioCount = characters.Where(c => c.Series.Contains("Donkey Kong") && c.Series.Contains("Mario")).Count();
  Console.WriteLine($"There are {DkMarioCount} characters that appear in Mario and Donkey Kong series");
+ // which characters (name only) appear in Mario and Donkey Kong?
+ foreach(String? name in characters.Where(c => c.Series.Contains("Donkey Kong") && c.Series.Contains("Mario")).Select(c => c.Name))
+ {
+   Console.WriteLine($"\t{name}");
+ }
