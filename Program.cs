@@ -52,7 +52,7 @@
  // how many characters were created in 1995
  Console.WriteLine($"How many? {characters.Count(c => c.YearCreated == 1995)}");
  // which characters were created in 1995
- foreach(Character character in characters.Where(c => c.YearCreated == 1995))
+ foreach(String? name in characters.Where(c => c.YearCreated == 1995).Select(c => c.Name))
  {
-    Console.WriteLine(character.Name);
+  Console.WriteLine(name);
  }
