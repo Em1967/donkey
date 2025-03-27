@@ -84,10 +84,20 @@
  // }
  
  // how many letters make up the longest character name(s)
- int LengthOfName = characters.Max(c => c.Name!.Length);
- Console.WriteLine($"There are {characters.Max(c => c.Name!.Length)} letters in the longest character's name");
+// int LengthOfName = characters.Max(c => c.Name!.Length);
+// Console.WriteLine($"There are {characters.Max(c => c.Name!.Length)} letters in the longest character's name");
  // which characters have the longest name?
- foreach(string? name in characters.Where(c => c.Name!.Length == LengthOfName).Select(c => c.Name))
+ //foreach(string? name in characters.Where(c => c.Name!.Length == LengthOfName).Select(c => c.Name))
+// {
+ //  Console.WriteLine($"\t{name}");
+// }
+
+ // all characters grouped by year created
+ var CharactersByYearCreated = characters.GroupBy(c => c.YearCreated);
+ foreach(var characterByYearCreated in CharactersByYearCreated)
  {
-   Console.WriteLine($"\t{name}");
+ Console.WriteLine(characterByYearCreated.Key);
+   foreach(var character in characterByYearCreated) {
+     Console.WriteLine($"\t{character.Name}");
+   }
  }
