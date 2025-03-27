@@ -1,0 +1,15 @@
+C:\Users\Emichel\donkey\bin\Debug\net8.0\donkey.exe
+C:\Users\Emichel\donkey\bin\Debug\net8.0\donkey.deps.json
+C:\Users\Emichel\donkey\bin\Debug\net8.0\donkey.runtimeconfig.json
+C:\Users\Emichel\donkey\bin\Debug\net8.0\donkey.dll
+C:\Users\Emichel\donkey\bin\Debug\net8.0\donkey.pdb
+C:\Users\Emichel\donkey\obj\Debug\net8.0\donkey.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Emichel\donkey\obj\Debug\net8.0\donkey.AssemblyInfoInputs.cache
+C:\Users\Emichel\donkey\obj\Debug\net8.0\donkey.AssemblyInfo.cs
+C:\Users\Emichel\donkey\obj\Debug\net8.0\donkey.csproj.CoreCompileInputs.cache
+C:\Users\Emichel\donkey\obj\Debug\net8.0\donkey.sourcelink.json
+C:\Users\Emichel\donkey\obj\Debug\net8.0\donkey.dll
+C:\Users\Emichel\donkey\obj\Debug\net8.0\refint\donkey.dll
+C:\Users\Emichel\donkey\obj\Debug\net8.0\donkey.pdb
+C:\Users\Emichel\donkey\obj\Debug\net8.0\donkey.genruntimeconfig.cache
+C:\Users\Emichel\donkey\obj\Debug\net8.0\ref\donkey.dll
