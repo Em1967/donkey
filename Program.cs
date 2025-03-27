@@ -17,4 +17,10 @@
  Console.Clear();
  
  // display first character
- Console.WriteLine(characters.First().Display());
+// Console.WriteLine(characters.First().Display());
+ 
+ // display the first 5 characters
+ foreach(Character character in characters.Take(5))
+ {
+   Console.WriteLine(character.Display());
+ }
