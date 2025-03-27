@@ -54,5 +54,5 @@
  // which characters were created in 1995
  foreach(Character character in characters.Where(c => c.YearCreated == 1995))
  {
-   Console.WriteLine(character.Display());
+    Console.WriteLine(character.Name);
  }
