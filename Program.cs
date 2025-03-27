@@ -76,3 +76,6 @@
  {
    Console.WriteLine($"\t{name}");
  }
+ // how many characters appear in Donkey Kong and not in Mario?
+ int DkNotMarioCount = characters.Where(c => c.Series.Contains("Donkey Kong") && !c.Series.Contains("Mario")).Count();
+ Console.WriteLine($"There are {DkNotMarioCount} characters that appear in Donkey Kong and Not in Mario series");
