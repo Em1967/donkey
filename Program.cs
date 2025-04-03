@@ -187,3 +187,12 @@ foreach (var c in characters.Where(c => c.Alias.Contains("Snowmad King")).Select
 {
     Console.WriteLine($"{c.Name} - {c.Alias}");
 }
+//1.24?
+
+ Console.WriteLine($"Characters with species 'Kremling': {characters.Count(c => c.Species == "Kremling")}");
+
+ //1.24b
+  foreach (var c in characters.Where(c => c.Species == "Kremling").Select(c => c.Name))
+        {
+            Console.WriteLine(c);
+        }
