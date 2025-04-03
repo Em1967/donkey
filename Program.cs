@@ -101,7 +101,7 @@
      //Console.WriteLine($"\t{character.Name}");
   // }
  //}
-
+Console.WriteLine("___________________________________________________");
  //1.19a
  Console.WriteLine($"Characters created in 1981: {characters.Count(c => c.YearCreated == 1981)}");
 
@@ -123,3 +123,9 @@
 
 //1.19e
   Console.WriteLine($"Characters created in 1981 (Donkey Kong series): {characters.Count(c => c.YearCreated == 1981 && c.Series.Contains("Donkey Kong"))}");
+
+  //1.19f
+  foreach (var c in characters.Where(c => c.YearCreated == 1981 && c.Series.Contains("Donkey Kong")).Select(c => c.Name))
+        {
+            Console.WriteLine(c);
+        }
