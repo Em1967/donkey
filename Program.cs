@@ -140,3 +140,50 @@ Console.WriteLine("___________________________________________________");
     Console.WriteLine(c);
 }
 
+//1.21
+bool anyNoAlias = characters.Any(c => !c.Alias.Any());
+Console.WriteLine($"Any characters without alias: {anyNoAlias}");
+
+// 1.21b Count characters with no alias (all series)
+Console.WriteLine($"Characters without alias: {characters.Count(c => !c.Alias.Any())}");
+
+// 1.21c List characters with no alias (all series) - return Name, Alias (empty), and Series
+foreach (var c in characters.Where(c => !c.Alias.Any()).Select(c => new { c.Name, Alias = "None", c.Series }))
+{
+    Console.WriteLine($"{c.Name} - {c.Alias} - {string.Join(", ", c.Series)}");
+}
+
+// 1.21d 
+bool anyMarioNoAlias = characters.Any(c => c.Series.Contains("Mario") && !c.Alias.Any());
+Console.WriteLine($"Any characters without alias (Mario series): {anyMarioNoAlias}");
+
+// 1.21e 
+Console.WriteLine($"Characters without alias (Mario series): {characters.Count(c => c.Series.Contains("Mario") && !c.Alias.Any())}");
+
+// 1.21f 
+foreach (var c in characters.Where(c => c.Series.Contains("Mario") && !c.Alias.Any()).Select(c => new { c.Name, Alias = "None" }))
+{
+    Console.WriteLine($"{c.Name} - {c.Alias}");
+}
+
+// 1.21g 
+bool anyDKNoAlias = characters.Any(c => c.Series.Contains("Donkey Kong") && !c.Alias.Any());
+Console.WriteLine($"Any characters without alias (Donkey Kong series): {anyDKNoAlias}");
+
+// 1.21h 
+Console.WriteLine($"Characters without alias (Donkey Kong series): {characters.Count(c => c.Series.Contains("Donkey Kong") && !c.Alias.Any())}");
+
+// 1.21i 
+foreach (var c in characters.Where(c => c.Series.Contains("Donkey Kong") && !c.Alias.Any()).Select(c => new { c.Name, Alias = "None" }))
+{
+    Console.WriteLine($"{c.Name} - {c.Alias}");
+}
+
+//1.22
+bool hasSnowmadKingAlias = characters.Any(c => c.Alias.Contains("Snowmad King"));
+Console.WriteLine($"Any character with alias 'Snowmad King': {hasSnowmadKingAlias}");
+//1.22b
+foreach (var c in characters.Where(c => c.Alias.Contains("Snowmad King")).Select(c => new { c.Name, Alias = "Snowmad King" }))
+{
+    Console.WriteLine($"{c.Name} - {c.Alias}");
+}
