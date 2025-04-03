@@ -196,3 +196,19 @@ foreach (var c in characters.Where(c => c.Alias.Contains("Snowmad King")).Select
         {
             Console.WriteLine(c);
         }
+
+//1.25
+ Console.WriteLine($"Human characters in Mario series: {characters.Count(c => c.Series.Contains("Mario") && c.Species == "Human")}");
+
+ //1.25b
+ foreach (var c in characters.Where(c => c.Series.Contains("Mario") && c.Species == "Human").Select(c => c.Name))
+        {
+            Console.WriteLine(c);
+        }
+
+//1.26
+        foreach (var c in characters.Where(c => c.Series.Contains("Donkey Kong") && c.Species != "Human" && c.Species != "Kong").Select(c => new { c.Name, c.Species }))
+        {
+            Console.WriteLine($"{c.Name} - {c.Species}");
+        }
+    
