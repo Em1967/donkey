@@ -93,11 +93,33 @@
 // }
 
  // all characters grouped by year created
- var CharactersByYearCreated = characters.GroupBy(c => c.YearCreated);
- foreach(var characterByYearCreated in CharactersByYearCreated)
- {
- Console.WriteLine(characterByYearCreated.Key);
-   foreach(var character in characterByYearCreated) {
-     Console.WriteLine($"\t{character.Name}");
-   }
- }
+// var CharactersByYearCreated = characters.GroupBy(c => c.YearCreated);
+ //foreach(var characterByYearCreated in CharactersByYearCreated)
+ //{
+ //Console.WriteLine(characterByYearCreated.Key);
+  // foreach(var character in characterByYearCreated) {
+     //Console.WriteLine($"\t{character.Name}");
+  // }
+ //}
+
+ //1.19a
+ Console.WriteLine($"Characters created in 1981: {characters.Count(c => c.YearCreated == 1981)}");
+
+ //1.19b
+  foreach (var c in characters.Where(c => c.YearCreated == 1981).Select(c => new { c.Name }))
+        {
+            Console.WriteLine($"{c.Name} ");
+        }
+
+//1.19c
+ Console.WriteLine($"Characters created in 1981 (Mario series): {characters.Count(c => c.YearCreated == 1981 && c.Series.Contains("Mario"))}");
+
+//1.19d
+ foreach (var c in characters.Where(c => c.YearCreated == 1981 && c.Series.Contains("Mario")).Select(c => c.Name))
+        {
+            Console.WriteLine(c);
+        }
+
+
+//1.19e
+  Console.WriteLine($"Characters created in 1981 (Donkey Kong series): {characters.Count(c => c.YearCreated == 1981 && c.Series.Contains("Donkey Kong"))}");

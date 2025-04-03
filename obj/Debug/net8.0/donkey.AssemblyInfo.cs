@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("donkey")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b58d51fafcba0293f6fb32b00a5b6c3396ab5f6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d665fd70a15e055af0ccaf8a21d79bd9eec0c1b6")]
 [assembly: System.Reflection.AssemblyProductAttribute("donkey")]
 [assembly: System.Reflection.AssemblyTitleAttribute("donkey")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
