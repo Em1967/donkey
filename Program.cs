@@ -129,3 +129,14 @@ Console.WriteLine("___________________________________________________");
         {
             Console.WriteLine(c);
         }
+
+  //1.20
+
+   Console.WriteLine($"Characters first appeared in Donkey Kong 64: {characters.Count(c => c.FirstAppearance == "Donkey Kong 64")}");
+
+   //1.20b
+   foreach (var c in characters.Where(c => c.FirstAppearance == "Donkey Kong 64").Select(c => c.Name))
+{
+    Console.WriteLine(c);
+}
+
